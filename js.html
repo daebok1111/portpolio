@@ -1,3 +1,4 @@
+<!-- 0203자바스크립트 이벤트핸들러 함 -->
 <!DOCTYPE html> 
 <html>
 <head>
@@ -11,8 +12,17 @@ var button = document.getElementById('myButton'); 	//mybutton이라는 아이디
 
 button.addEventListener('click', function() { 
 //버튼 클릭시 'button clicked!'라고 출력
-document.write('button clicked!’); 
+document.write('button clicked!'); 
 }); 
+
+INPUT type = "button" value = "배경색 변경" onClick="document.bgColor='red';”>
+
+	<INPUT type="text" id="name1" onfocus="focusFunction(this.id)">
+
+	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)">
+
+	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)">
+
 </script> 
 </body> 
 </html>
