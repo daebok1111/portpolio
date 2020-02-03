@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<form>
+<button id="mybutton">Click me</button>
+<input type= "button" value="배경색 변경" onClick="document.bgcolor='red';">
+<input type= "text" id ="name1" onfocus = "focusFunction(this.id)"><br>
+<input type= "text" id = "name2" ondfocus = "focusFunction(this.id)" onblur="blurFunction(this.id)"><br>
+<input type= "text" id= "name3" ondblclick = "dblClickFunction(this.id)"><br>
+</form>
 
+
+<script type="text/javascript">
+var button = document.getElementById("mybutton");
+
+button.addEventListener("click" ,function(){
+	document.write("button clicked");
+})
+
+function dblClickFunction(x){
+	if(document.getElementById(x).style.background =="white"){
+		document.getElementById(x).style.background = "green";
+	}else{
+		document.getElementById(x).style.background ="white";
+	}
+}
+
+function focusFunction(x){
+	document.getElementByID(x).style.background = "yellow";
+}
+
+function blurFunction(x){
+	document.getElementById(x).style.background = "red";
+}
+
+</script>
+
+
+
+
+</body>
+</html>
