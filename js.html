@@ -4,10 +4,12 @@
 <head>
 <meta charset="UTF-8">
 </head>
-<body> 
+<body dblClick="dblClickFunction(this.id)"> 
+<label>폼생성</label>
 <button id="myButton">Click me</button><!-- mybutton이라는 아이디값을 갖는 버튼 생성 -->
-<form id="form_dbl"  dblClick="dblClickFunction(this.id)">
-<INPUT type = "button" value = "배경색 변경" onClick="document.bgColor='red';><br>
+
+<form id="form_dbl"  >
+<INPUT type = "button" value = "배경색 변경" onClick="document.bgColor='red'"><br>
 
 	<INPUT type="text" id="name1" onfocus="focusFunction(this.id)"><br>
 
@@ -28,9 +30,11 @@ document.write('button clicked!');
 
 }); 
 
+// 더블 클릭 함수 시작
+
 function dblClickFunction(x) {
-	if(document.getElementById(x).style.background == "white"){
-	   document.getElementById(x).style.background = "green";
+	if(document.bgColor == "white"){
+		document.bgColor = "green";
 	}else{
 	   document.getElementById(x).style.background = "white";
 	}
@@ -41,7 +45,8 @@ function dblClickFunction(x) {
 	function blurFunction(x) {
 	    document.getElementById(x).style.background = "red";
 	}
-
+	
+	//더블 클릭 함수 끝
 
 </script> 
 </body> 
