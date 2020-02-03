@@ -6,14 +6,18 @@
 </head>
 <body> 
 <button id="myButton">Click me</button><!-- mybutton이라는 아이디값을 갖는 버튼 생성 -->
-<INPUT type = "button" value = "배경색 변경" onClick="document.bgColor='red';”>
+<form id="form_dbl"  dblClick="dblClickFunction(this.id)">
+<INPUT type = "button" value = "배경색 변경" onClick="document.bgColor='red';><br>
 
-	<INPUT type="text" id="name1" onfocus="focusFunction(this.id)">
+	<INPUT type="text" id="name1" onfocus="focusFunction(this.id)"><br>
 
-	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)">
+	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)"><br>
 
-	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)">
+	<INPUT type="text" id="name3" onfocus="focusFunction(this.id)"><br>
 	
+	</form>
+	
+	<!-- 스크립트는 맨아래에 하는게 낫다 -->
  <script type="text/javascript">
 var button = document.getElementById('myButton'); 	//mybutton이라는 아이디 값을 갖음
 //button 에 click이벤트 핸들러 추가
@@ -21,8 +25,22 @@ var button = document.getElementById('myButton'); 	//mybutton이라는 아이디
 button.addEventListener('click', function() {
 //버튼 클릭시 'button clicked!'라고 출력
 document.write('button clicked!'); 
+
 }); 
 
+function dblClickFunction(x) {
+	if(document.getElementById(x).style.background == "white"){
+	   document.getElementById(x).style.background = "green";
+	}else{
+	   document.getElementById(x).style.background = "white";
+	}
+	}
+	function focusFunction(x) {
+	    document.getElementById(x).style.background = "yellow";
+	}
+	function blurFunction(x) {
+	    document.getElementById(x).style.background = "red";
+	}
 
 
 </script> 
