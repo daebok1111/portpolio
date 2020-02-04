@@ -6,7 +6,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-
+<!-- 첫번째 예시 시작 -->
 <h1>test1</h1>
 <h1 id="hid">test2</h1><!-- 같은 id를 두번 썻을 경우 상단의 id만 적용 -->
 <h1 name="hname">test3</h1>
@@ -14,6 +14,8 @@
 <h1 class="hcls select">test5</h1>
 <h1 name="hname">test6</h1>
 <h1 id="hid">test7</h1>
+
+<!-- 첫번째 예시 끝 -->
 
 <ol>
 <li class="first"><h2>1-1</h2></li>
@@ -40,12 +42,13 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-	$("ol>li:nth(0).first").css("color", "red");
-	$("ol>li.second").css("color", "orange");
-	$("ol>li:nth(2).first").css("color", "blue");
-	$("ul>li:nth(0).third").css("color", "yellow");
-	$("ul>li.second").css("color", "green");
-	$("ul>li:nth(2).third").css("color", "black");
+	$("li.first").css("color", "red");				//1-1
+	$("li.second").eq(0).css("color", "yellow");	//1-2	  	    second라는 클래스 중에서 첫번쨰       //eq(0)== li중에서 첫번째를 찾아라
+	$("li.first").eq(1).css("color", "green");		//1-3
+	
+	$("li.third").css("color", "yellow");	//2-1
+	$("li.second").eq(1).css("color", "green");		//2-2
+	$("li.third").eq(1).css("color", "black");	//2-3
 });
 
 </script>
