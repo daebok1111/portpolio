@@ -5,20 +5,28 @@
 <meta charset="UTF-8">
 </head>
 <body>
+<select>
+<option>apple</option>
+<option>bag</option>
+<option>cat</option>
+<option>dog</option>
+<option>earth worm</option>
+</select>
 
-<input type="text">
-<input type="password">
-<input type="radio">
-<input type="checkbox">
-<input type="file">
 
 <script>
 $(document).ready(function(){
-	$("input[type=text]").val("change value");
+	setTimeout(function(){
+		var value = $("select > option:selected").val();
+		
+		alert(value);
+	}, 5000   );
+	
+	
 	
 });
 
-
 </script>
+
 </body>
 </html>
