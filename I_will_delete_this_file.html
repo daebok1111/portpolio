@@ -34,8 +34,7 @@ function click2(){
 }
 
 function click3(){ //A색 변경
-	$("td:nth-child(3n+2)").css("color", "yellow");
-	$("tr:last").css("color", "black");
+	$("td:nth-child(3n+2).it(td:last)").css("color", "yellow");
 }
 
 function click4(){	//B색 변경
