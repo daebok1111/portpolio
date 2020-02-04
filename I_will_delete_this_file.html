@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <meta charset="UTF-8">
 </head>
 <body>
-<h1 class="item">header0</h1>
-<h1 class="item select">header1</h1>
-<h1 class="item">header2</h1>
+
+<ol>
+<li class="first"><h2></h2></li>
+<li class="second"><h2></h2></li>
+<li class="first"><h2></h2></li>
+</ol>
+
+<ul>
+<li class="third"><h2></h2></li>
+<li class="second"><h2></h2></li>
+<li class="third"><h2></h2></li>
+</ul>
 
 
 <script>
 $(document).ready(function(){
-	$("h1.item").css("background" , "red");
-	$("h1.item").css("color" , "yellow");
-	$("h1.item.select").css("background", "green");
+	$("li.first.eq(0)").css("color", "red");
+	
 	
 });
-//ddsf
+
 </script>
 </body>
 </html>
