@@ -5,28 +5,22 @@
 <meta charset="UTF-8">
 </head>
 <body>
-
-<ol>
-<li class="first"><h2>1-1</h2></li>
-<li class="second"><h2>1-2</h2></li>
-<li class="first"><h2>1-3</h2></li>
-</ol>
-
+<div>
 <ul>
-<li class="third"><h2>2-1</h2></li>
-<li class="second"><h2>2-2</h2></li>
-<li class="third"><h2>2-3</h2></li>
+<li><h1>apple</h1></li>
+<li>bag</li>
+<li>cat</li>
+<li>dog</li>
+<li>earth worm</li>
 </ul>
+<h1>child h1</h1>
+
+</div>
 
 
 <script>
 $(document).ready(function(){
-	$("li.first").eq(0).css("color", "red");
-	$("li.second").eq(0).css("color", "orange");
-	$("li.first").eq(1).css("color", "green");
-	$("li.third").eq(0).css("color", "blue");
-	$("li.second").eq(1).css("color", "lime");
-	$("li.third").eq(1).css("color", "black");
+	$("div > h1").css("color", "red");
 	
 	
 });
