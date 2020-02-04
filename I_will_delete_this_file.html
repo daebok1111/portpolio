@@ -34,12 +34,13 @@ function click2(){
 }
 
 function click3(){ //A색 변경
-	$("tr td:nth-child(3n+2)").lt(-1).css("color", "yellow");
+	$("tr td:nth-child(3n+2)").css("color", "yellow");
 	
 }
 
 function click4(){	//B색 변경
 	$("td:nth-child(3n)").css("color", "yellow");
+	$("td:contains(30)").css("color", "white");
 }
 
 function reset(){
