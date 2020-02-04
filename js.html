@@ -32,6 +32,7 @@
 <!-- 0204 두번째 예시 끝 -->
 
 <!-- 0204 3번째 예시 시작 -->
+<h1>select option</h1>
 <select>
 <option>apple</option>
 <option>pear</option>
@@ -67,9 +68,11 @@ $(document).ready(function(){
 //두번째 예시 J-Query 끝
 
 // 3번째 예시  J-Query 시작
+//정의 : setTimeout(행동, 딜레이시간)
 $(document).ready(function(){
-	setTimeout(function(){
+	setTimeout(function() {
 		var value = $("select > option:selected").val();
+		if(value)
 		alert(value);
 	}, 5000);	
 });
