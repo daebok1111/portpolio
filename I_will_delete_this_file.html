@@ -1,45 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript" src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js></script>
 <meta charset="UTF-8">
 </head>
 <body>
-<form>
-<button id="mybutton">Click me</button><br>
-<input type= "button" value="배경색 변경" onClick="document.bgcolor='red';"><br>
-<input type= "text" id ="name1" onfocus = "focusFunction(this.id)"><br>
-<input type= "text" id = "name2" ondfocus = "focusFunction(this.id)" onblur="blurFunction(this.id)"><br>
-<input type= "text" id= "name3" ondblclick = "dblClickFunction(this.id)"><br>
-</form>
+<h1>안녕</h1>
 
 
-<script type="text/javascript">
-var button = document.getElementById("mybutton");
+<script>
+$(document).ready(function(){
+$("*").css("color", "red");
 
-button.addEventListener("click" ,function(){
-	document.write("button clicked");
-})
-
-function dblClickFunction(x){
-	if(document.getElementById(x).style.background =="white"){
-		document.getElementById(x).style.background = "green";
-	}else{
-		document.getElementById(x).style.background ="white";
-	}
-}
-
-function focusFunction(x){
-	document.getElementByID(x).style.background = "yellow";
-}
-
-function blurFunction(x){
-	document.getElementById(x).style.background = "red";
-}
-
+	
+});
 </script>
-
-
-
-
 </body>
 </html>
