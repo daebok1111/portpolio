@@ -5,19 +5,18 @@
 <meta charset="UTF-8">
 </head>
 <body>
-<h1>text1</h1>
-<h1 id="text">text2</h1>
-<h1 name="text">text3</h1>
-<h1 class="text">text4</h1>
+<h1 class="item">header0</h1>
+<h1 class="item select">header1</h1>
+<h1 class="item">header2</h1>
+
 
 <script>
-$(document).ready(function(){
-	$("h1").css("color", "red");
-	$("#text").css("color", "orange");
-	$("h1[name=text]").css("color", "yellow");
-	$("h1.text").css("color", "green");
+$(document).ready(function{
+	$("h1.item").css("background" : "red");
+	$("h1.item").css("color" : "yellow");
+	
 });
-//확인 필요
+
 </script>
 </body>
 </html>
