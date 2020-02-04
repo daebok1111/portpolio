@@ -52,12 +52,12 @@
 <tr><td>송가인</td><td>O</td><td>해남</td></tr>
 <tr><td>이낙연</td><td>A</td><td>광주</td></tr>
 </table>
-
+<!-- 0204 4번째 예시 끝 -->
 
 </body>
 
 <script>
-//첫번째 예시 J-Query 시작
+//0204 첫번째 예시 J-Query 시작
 $(document).ready(function(){
 	$("h1").css("color", "red");  //모든 h1요소의 css설정을 변경 
 	$("#hid").css("color", "orange");  //id가 hid인 요소의 css설정을 변경
@@ -65,9 +65,9 @@ $(document).ready(function(){
 	$(".hcls").css("color", "green");  //class hcls인 요소의 css설정을 변경   hcls select는 hcls의 클래스를 포함한다.(hcls select는 hcls로부터 상속받는다고 생각하면 쉽다)
 	$(".hcls.select").css("color", "blue"); //class가 hcls select인 요소의 css설정을 변경 
 });
-//첫번째 예시 J-Query 끝
+//0204 첫번째 예시 J-Query 끝
 
-//두번째 예시 J-Query 시작
+//0204 두번째 예시 J-Query 시작
 $(document).ready(function(){
 	$("li.first").css("color", "red");				//1-1  엘리먼트(텍스트)를 지정
 	$("li.second").eq(0).css("color", "yellow");	//1-2  엘리먼트(텍스트)를 지정  	 second라는 클래스를 가진 li중에서 첫번째 li를 찾아라 ==eq(0)[0이 첫번째라는 뜻]
@@ -77,9 +77,9 @@ $(document).ready(function(){
 	$("li.second").eq(1).css("color", "green");		//2-2  엘리먼트(텍스트)를 지정 
 	$("li.third").eq(1).css("color", "black");		//2-3  엘리먼트(텍스트)를 지정 
 });
-//두번째 예시 J-Query 끝
+//0204 두번째 예시 J-Query 끝
 
-// 3번째 예시  J-Query 시작
+//0204 3번째 예시  J-Query 시작
 //정의 : setTimeout(행동, 딜레이시간)
 $(document).ready(function(){
 	setTimeout(function() {
@@ -88,16 +88,16 @@ $(document).ready(function(){
 		alert(value);
 	}, 5000);	//5초뒤에 띄움
 });
-//3번째 예시 J-Query 끝
+//0204 3번째 예시 J-Query 끝
 
-//4번째 예시 J-Query 시작
+//0204 4번째 예시 J-Query 시작
 $(document).ready(function(){
-	$("tr:odd").css("background", "white");
-	$("tr:even").css("background", "#cccccc");
-	$("tr:first").css("background", "#FFFFFF");
+	$("tr:eq(0)").css("background", "#000000").css("color", "#FFFFFF");
+	$("tr:nth-child(3n+1)").css("background", "gray");
+	$("tr:nth-child(3n+2)").css("background", "yellow");
 	
 });
-
+//0204 4번째 예시 J-Query 끝
 </script>
 </html>
 <!-- 자식은 하나 후손은 여럿 -->
