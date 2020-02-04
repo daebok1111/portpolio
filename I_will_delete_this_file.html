@@ -18,13 +18,15 @@
 <input type="button" value="[B]색 변경" onclick="click4()">
 <input type="button" value="reset" onclick="reset">
 
+<!-- 요소:contains(문자열) -->
+
 <script>
 function clear(){
 	$("table *").removeAttr("style");
 }
 
 function click1(){
-	
+	$("tr:contains(10)").css("color", "yellow");
 }
 
 function click2(){
