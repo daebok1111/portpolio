@@ -42,6 +42,18 @@
 
 </select>
 <!-- 0204 3번째 예시 끝 -->
+<!-- 0204 4번째 예시 시작 -->
+<table>
+<tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+<tr><td>홍길동</td><td>B</td><td>장성</td></tr>
+<tr><td>임꺽정</td><td>AB</td><td>논산</td></tr>
+<tr><td>서태지</td><td>A</td><td>서울</td></tr>
+<tr><td>송대관</td><td>O</td><td>해남</td></tr>
+<tr><td>송가인</td><td>O</td><td>해남</td></tr>
+<tr><td>이낙연</td><td>A</td><td>광주</td></tr>
+</table>
+
+
 </body>
 
 <script>
@@ -74,9 +86,18 @@ $(document).ready(function(){
 		var value = $("select > option:selected").val();
 		if(value)
 		alert(value);
-	}, 5000);	
+	}, 5000);	//5초뒤에 띄움
 });
-//???
+//3번째 예시 J-Query 끝
+
+//4번째 예시 J-Query 시작
+$(document).ready(function(){
+	$("tr:odd").css("background", "white");
+	$("tr:even").css("background", "#cccccc");
+	$("tr:first").css("background", "#FFFFFF");
+	
+});
+
 </script>
 </html>
 <!-- 자식은 하나 후손은 여럿 -->
