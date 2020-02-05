@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script
+   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-<table border="1">
-<tr><th>êµ¬ë¶„</th><th>A</th><th>B</th></tr>
-<tr><td>ê°€</td><td>10</td><td>10</td></tr>
-<tr><td>ë‚˜</td><td>20</td><td>20</td></tr>
-<tr><td>ê³„</td><td>30</td><td>30</td></tr>
 
-</table>
-<input type="button" value="[ê°€]ìƒ‰ ë³€ê²½" onclick="click1()">
-<input type="button" value="[ë‚˜]ìƒ‰ ë³€ê²½" onclick="click2()">
-<input type="button" value="[A]ìƒ‰ ë³€ê²½" onclick="click3()">
-<input type="button" value="[B]ìƒ‰ ë³€ê²½" onclick="click4()">
-<input type="button" value="reset" onclick="clear()">
-
-<!-- ìš”ì†Œ:contains(ë¬¸ìžì—´) -->
-
-<script>
-function clear(){
-	$("table *").removeAttr("style");
-}
-
-function click1(){
-	$("td:contains(10)").css("color", "yellow");
-}
-
-function click2(){
-	$("td:contains(20)").css("color", "yellow");
-}
-
-function click3(){ //Aìƒ‰ ë³€ê²½
-	$("tr td:nth-child(3n+2)").css("color", "yellow");
-	
-}
-
-function click4(){	//Bìƒ‰ ë³€ê²½
-	$("td:nth-child(3n)").css("color", "yellow");
-	
-}
-
-
-</script>
+   <table border="1">
+      <tr>
+         <th>±¸ºÐ</th>
+         <th>A</th>
+         <th>B</th>
+      </tr>
+      <tr>
+         <td>°¡</td>
+         <td>10</td>
+         <td>10</td>
+      </tr>
+      <tr>
+         <td>³ª</td>
+         <td>20</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td>°è</td>
+         <td>30</td>
+         <td>30</td>
+      </tr>
+   </table>
+   <input type="button" value="[°¡]»ö º¯°æ" onclick="click1()" />
+   <input type="button" value="[³ª]»ö º¯°æ" onclick="click2()" />
+   <input type="button" value="[A]»ö º¯°æ" onclick="click3()" />
+   <input type="button" value="[B]»ö º¯°æ" onclick="click4()" />
+   <input type="button" value="ÃÊ±âÈ­" onclick="click5()" />
 </body>
+</html>
+</body>
+
+<script> function clear() {
+$("table *").removeAttr("style"); }
+function click1() { $("td:eq(1)").css("background","yellow").css("color","green");
+               $("td:eq(2)").css("background","yellow").css("color","green");} 
+function click2() { $("td:eq(4)").css("background","yellow").css("color","green");
+               $("td:eq(5)").css("background","yellow").css("color","green");}
+function click3() { $("td:eq(1)").css("background","yellow").css("color","green");
+               $("td:eq(4)").css("background","yellow").css("color","green");}
+function click4() { $("td:eq(2)").css("background","yellow").css("color","green");
+               $("td:eq(5)").css("background","yellow").css("color","green");}
+function click5() { $("td:eq(1)").css("background","white").css("color","black");
+               $("td:eq(2)").css("background","white").css("color","black");
+               $("td:eq(4)").css("background","white").css("color","black");
+               $("td:eq(5)").css("background","white").css("color","black");}
+ </script>
 </html>
