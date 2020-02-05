@@ -60,10 +60,9 @@
 </table>
 <!-- 0204 4번째 예시 끝 -->
 
-<br><br>
-<hr>
+
 <!-- 0204 5번째 예시 시작(과제) -->
-<table border="1">
+<table>
 <tr><th>구분</th><th>A</th><th>B</th></tr>		<!-- 구분 -->	
 <tr><td>가</td><td>10</td><td>10</td></tr>		<!-- 가 -->	
 <tr><td>나</td><td>20</td><td>20</td></tr>		<!-- 나 -->	
@@ -73,8 +72,8 @@
 <input type="button" value="(가)색 변경" onclick="click1()">		<!-- 가 -->	
 <input type="button" value="(나)색 변경" onclick="click2()">		<!-- 나 -->	
 <input type="button" value="(A)색 변경" onclick="click3()">
-<input type="button" value="(B)색 변경" onclick="click4()"><br>
-<input type="submit" value="초기화" onclick="clear()">
+<input type="button" value="(B)색 변경" onclick="click4()">
+<input type="button" value="초기화" onclick="click5()" />
 <!-- 0204 5번째 예시 끝(과제) -->
 </body>
 
@@ -127,28 +126,22 @@ $(document).ready(function(){
 
 
 //0204 5번째 예시 J-Query 시작(과제)
-function clear(){
-	$("td *").removeAttr("style");
-}
-
-function click1(){
-	$("td:contains(10)").css("color", "yellow");
-}
-
-function click2(){
-	$("td:contains(20)").css("color", "yellow");
-}
-
-function click3(){ //A색 변경
-	$("tr td:nth-child(3n+2)").css("color", "yellow");
-	
-}
-
-function click4(){	//B색 변경
-	$("td:nth-child(3n)").css("color", "yellow");
-	
-}
-
+function click1() { $("td:eq(1)").css("background","yellow").css("color","green");
+               $("td:eq(2)").css("background","yellow").css("color","green");} 
+               
+function click2() { $("td:eq(4)").css("background","yellow").css("color","green");
+               $("td:eq(5)").css("background","yellow").css("color","green");}
+               
+function click3() { $("td:eq(1)").css("background","yellow").css("color","green");
+               $("td:eq(4)").css("background","yellow").css("color","green");}
+               
+function click4() { $("td:eq(2)").css("background","yellow").css("color","green");
+               $("td:eq(5)").css("background","yellow").css("color","green");}
+               
+function click5() { $("td:eq(1)").css("background","white").css("color","black");
+               $("td:eq(2)").css("background","white").css("color","black");
+               $("td:eq(4)").css("background","white").css("color","black");
+               $("td:eq(5)").css("background","white").css("color","black");}
 </script>
 </html>
 <!-- 자식은 하나 후손은 여럿이다. -->
